@@ -38,4 +38,10 @@ public class PatientController {
         patientService.deletePatient(patientId);
         return "patient deleted";
     }
+
+    @GetMapping("load")
+    public String load(Patient patient){
+        patientService.load();
+        return "Added all records";
+    }
 }
